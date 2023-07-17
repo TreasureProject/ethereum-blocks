@@ -13,4 +13,5 @@ type Block @entity {
   stateRoot: String
   size: BigInt
   unclesHash: String
+  baseFeePerGas: BigInt
 }

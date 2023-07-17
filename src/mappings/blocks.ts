@@ -1,12 +1,7 @@
-import {
-    EthereumBlock
-} from "@graphprotocol/graph-ts"
+import { ethereum } from "@graphprotocol/graph-ts"
+import { Block } from "../../generated/schema"
 
-import {
-    Block
-} from "../../generated/schema"
-
-export function handleBlock(block: EthereumBlock): void {
+export function handleBlock(block: ethereum.Block): void {
     let id = block.hash.toHex()
     let blockEntity = new Block(id);
     blockEntity.number = block.number;
@@ -22,5 +17,6 @@ export function handleBlock(block: EthereumBlock): void {
     blockEntity.stateRoot = block.stateRoot.toHex();
     blockEntity.size = block.size;
     blockEntity.unclesHash = block.unclesHash.toHex();
+    blockEntity.baseFeePerGas = block.baseFeePerGas;
     blockEntity.save();
   }
