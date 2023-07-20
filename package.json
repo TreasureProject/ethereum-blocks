@@ -9,7 +9,7 @@
     "deploy-arbgoerli": "bash scripts/deploy.sh arbitrum-goerli blocks-arbgoerli v1",
 
     "build-arbnova": "bash scripts/deploy.sh arbitrum-nova",
-    "deploy-arbnova": "bash scripts/deploy.sh arbitrum-nova block-arbnova v1",
+    "deploy-arbnova": "bash scripts/deploy.sh arbitrum-nova blocks-arbnova v1",
 
     "build-eth": "bash scripts/deploy.sh mainnet",
     "deploy-eth": "bash scripts/deploy.sh mainnet blocks-eth v1",
