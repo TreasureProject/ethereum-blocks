@@ -15,10 +15,13 @@
     "deploy-eth": "bash scripts/deploy.sh mainnet blocks-eth v1",
 
     "build-sepolia": "bash scripts/deploy.sh sepolia",
-    "deploy-sepolia": "bash scripts/deploy.sh sepolia blocks-sepolia v1"
+    "deploy-sepolia": "bash scripts/deploy.sh sepolia blocks-sepolia v1",
+
+    "build-arbsepolia": "bash scripts/deploy.sh arbitrum-sepolia",
+    "deploy-arbsepolia": "bash scripts/deploy.sh arbitrum-sepolia blocks-arbsepolia v1"
   },
   "dependencies": {
-    "@graphprotocol/graph-cli": "^0.52.0",
+    "@graphprotocol/graph-cli": "^0.58.0",
     "@graphprotocol/graph-ts": "^0.31.0",
     "mustache": "^4.2.0"
   }
