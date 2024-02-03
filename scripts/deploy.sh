@@ -30,7 +30,8 @@ fi
 
 SUBGRAPH=$2
 VERSION=$3
-DEPLOY_KEY=$(grep SATSUMA_DEPLOY_KEY .env | cut -d '=' -f2)
 
 # Deploy.
-npx graph deploy ${SUBGRAPH} --version-label ${VERSION} --node https://app.satsuma.xyz/api/subgraphs/deploy --deploy-key ${DEPLOY_KEY}
+DEPLOY_KEY=$(grep GOLDSKY_API_KEY .env | cut -d '=' -f2)
+goldsky --token ${DEPLOY_KEY} subgraph deploy ${SUBGRAPH}/${VERSION} --path .
+# goldsky --token ${DEPLOY_KEY} subgraph tag create ${SUBGRAPH}/${VERSION} --tag live
