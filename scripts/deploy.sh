@@ -34,4 +34,4 @@ VERSION=$3
 # Deploy.
 DEPLOY_KEY=$(grep GOLDSKY_API_KEY .env | cut -d '=' -f2)
 goldsky --token ${DEPLOY_KEY} subgraph deploy ${SUBGRAPH}/${VERSION} --path .
-# goldsky --token ${DEPLOY_KEY} subgraph tag create ${SUBGRAPH}/${VERSION} --tag live
+goldsky --token ${DEPLOY_KEY} subgraph tag create ${SUBGRAPH}/${VERSION} --tag live
