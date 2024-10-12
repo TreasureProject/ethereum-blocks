@@ -2,6 +2,9 @@
   "name": "ethereum-blocks",
   "license": "UNLICENSED",
   "scripts": {
+    "build-topaz": "bash scripts/deploy.sh topaz-testnet",
+    "deploy-topaz": "bash scripts/deploy.sh topaz-testnet blocks-topaz v1",
+
     "build-arb": "bash scripts/deploy.sh arbitrum-one",
     "deploy-arb": "bash scripts/deploy.sh arbitrum-one blocks-arb v1",
 
