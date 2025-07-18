@@ -2,6 +2,12 @@
   "name": "ethereum-blocks",
   "license": "UNLICENSED",
   "scripts": {
+    "build-abstract": "bash scripts/deploy.sh abstract",
+    "deploy-abstract": "bash scripts/deploy.sh abstract blocks-abstract v1",
+
+    "build-ronin": "bash scripts/deploy.sh ronin",
+    "deploy-ronin": "bash scripts/deploy.sh ronin blocks-ronin v1",
+
     "build-treasure": "bash scripts/deploy.sh treasure",
     "deploy-treasure": "bash scripts/deploy.sh treasure blocks-treasure v1",
 
